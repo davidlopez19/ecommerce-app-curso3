@@ -1,5 +1,12 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Injectable, NgModule, inject } from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  Router,
+  RouterModule,
+  RouterStateSnapshot,
+  Routes,
+} from '@angular/router';
 import { AuthenticationComponent } from './shared/authentication/authentication.component';
 import { CreateProductComponent } from './products/create-product/create-product.component';
 import { ListProductComponent } from './products/list-product/list-product.component';
@@ -8,6 +15,7 @@ import { ListClientComponent } from './clients/list-client/list-client.component
 import { CreateShoppingComponent } from './shopping/create-shopping/create-shopping.component';
 import { ListShoppingComponent } from './shopping/list-shopping/list-shopping.component';
 import { ClientsComponent } from './clients/clients.component';
+import { Observable, delay, tap, of } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -34,12 +42,10 @@ const routes: Routes = [
   {
     path: 'clients',
     component: ClientsComponent,
-    children: [
-      {
-        path: 'create',
-        component: CreateClientComponent,
-      },
-    ],
+  },
+  {
+    path: 'create',
+    component: CreateClientComponent,
   },
   {
     path: 'clients-list',

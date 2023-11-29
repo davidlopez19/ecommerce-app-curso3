@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { TableModule } from 'primeng/table';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { TabMenuModule } from 'primeng/tabmenu';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    TabMenuModule
+    TabMenuModule,
+    TableModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

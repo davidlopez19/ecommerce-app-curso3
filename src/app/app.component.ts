@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
 
   items: MenuItem[] | undefined;
   title = 'ecommerce-app-curso3';
+  products = [];
 
   ngOnInit(): void {
 

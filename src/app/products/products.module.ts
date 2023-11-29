@@ -6,6 +6,7 @@ import { ListProductComponent } from './list-product/list-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ProductService } from '../services/product.service';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { ProductService } from '../services/product.service';
     DetailProductComponent,
   ],
   providers: [ProductService],
-  imports: [CommonModule],
+  imports: [CommonModule, TableModule],
 })
 export class ProductsModule {}
