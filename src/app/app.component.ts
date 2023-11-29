@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
     this.items = [
       { label: 'Login', icon: 'pi pi-fw pi-home', routerLink: ['/login'] },
-      { label: 'Clientes', icon: 'pi pi-fw pi-calendar', routerLink: ['/clients'] },
+      { label: 'Clientes', icon: 'pi pi-fw pi-calendar', routerLink: ['/clients-list'] },
       { label: 'Productos', icon: 'pi pi-fw pi-pencil', routerLink: ['/products-list'] },
       { label: 'Compras', icon: 'pi pi-fw pi-file', routerLink: ['/shopping-list'] }
     ];

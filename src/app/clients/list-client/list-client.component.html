@@ -1,3 +1,22 @@
-<p>
-  list-client works!
-</p>
+<p-table [value]="clients">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Codigo cliente</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Teléfono</th>
+      <th>Dirección de facturación</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-client>
+    <tr>
+      <td>{{ client.id_cliente }}</td>
+      <td>{{ client.nombre }}</td>
+      <td>{{ client.correo }}</td>
+      <td>{{ client.telefono }}</td>
+      <td>{{ client.direccionfacturacion }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<button (click)="refresh()">asdasd</button>
