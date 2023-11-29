@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-client.component.css']
 })
 export class ListClientComponent implements OnInit {
+  clients = []
 
   constructor() { }
 
