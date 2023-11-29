@@ -5,13 +5,13 @@ export class ClientModel {
     nombre: string;
     correo: string;
     telefono: string;
-    direccion: string;
+    direccionfacturacion: string;
    
     constructor() {
       this.id_cliente = 0;
       this.nombre = '';
       this.correo = '';
       this.telefono = '';
-      this.direccion = '';
+      this.direccionfacturacion = '';
     }
   }
