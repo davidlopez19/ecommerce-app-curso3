@@ -7,6 +7,11 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ProductService } from '../services/product.service';
 import { TableModule } from 'primeng/table';
+import { InputTextModule } from 'primeng/inputtext';
+import { CardModule } from 'primeng/card';
+import { FormsModule } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -17,6 +22,14 @@ import { TableModule } from 'primeng/table';
     DetailProductComponent,
   ],
   providers: [ProductService],
-  imports: [CommonModule, TableModule],
+  imports: [
+    CommonModule,
+    TableModule,
+    InputTextModule,
+    CardModule,
+    FormsModule,
+    DropdownModule,
+    ButtonModule,
+  ],
 })
 export class ProductsModule {}

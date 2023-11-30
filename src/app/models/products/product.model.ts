@@ -1,10 +1,9 @@
 import { ProductStockModel } from "./product-stock.model";
 
 export class ProductModel {
-
+    id_producto: number;
     descripcion: string;
     id_estado: number;
-    id_producto: number;
     valor: number;
     stock: ProductStockModel;
 
