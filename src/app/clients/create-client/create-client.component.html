@@ -1,3 +1,26 @@
-<p>
-  create-client works!
-</p>
+<p-card>
+  <h3>Creación de producto</h3>
+  <div class="flex flex-column gap-2">
+      <label htmlFor="descripcion">Nombre del Cliente</label>
+      <input pInputText id="descripcion" [(ngModel)]="clientCreate.nombre" />
+  </div>
+
+  <div class="flex flex-column gap-2">
+      <label htmlFor="valor">Correo</label>
+      <input pInputText id="valor" [(ngModel)]="clientCreate.correo" />
+  </div>
+
+  <div class="flex flex-column gap-2">
+      <label htmlFor="cantidad">Telefono</label>
+      <input pInputText id="cantidad" [(ngModel)]="clientCreate.telefono" />
+  </div>
+
+  <div class="flex flex-column gap-2">
+    <label htmlFor="cantidad">Direccion</label>
+    <input pInputText id="cantidad" [(ngModel)]="clientCreate.direccionfacturacion" />
+</div>
+
+  <br>
+
+  <button pButton pRipple label="Guardar" (click)="saveInformation()" class="p-button-info"></button>
+</p-card>

@@ -20,4 +20,17 @@ export class ClientService extends BaseService {
       })
     );
   }
+
+  saveClient(clientToSave: ClientModel)
+  : Observable<ClientModel> {
+     return this.post<ClientModel> (
+      'api/Clientes/create',
+      clientToSave,
+      true
+     ).pipe(
+      map((result) => {
+        return result;
+      })
+     )
+  }
 }
