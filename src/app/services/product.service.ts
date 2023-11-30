@@ -28,4 +28,17 @@ export class ProductService extends BaseService {
       { idStatus: 3, nameStatus: 'Pendiente' },
     ];
   }
+
+  saveProduct(productToSave: ProductModel)
+  : Observable<ProductModel> {
+    return this.post<ProductModel>(
+      'api/Productos/create',
+      productToSave,
+      true
+    ).pipe(
+      map((result) => {
+        return result;
+      })
+    );
+  }
 }
