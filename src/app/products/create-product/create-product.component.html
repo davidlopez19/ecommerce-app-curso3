@@ -1,1 +1,42 @@
-<p>create-product works!</p>
+<p-card>
+
+    <h3>Creación de producto</h3>
+
+    <div class="flex flex-column gap-2">
+
+        <label htmlFor="descripcion">Descripcion de Producto</label>
+
+        <input pInputText id="descripcion" [(ngModel)]="productCreate.descripcion" />
+
+    </div>
+
+    <div class="flex flex-column gap-2">
+
+        <label htmlFor="valor">Valor</label>
+
+        <input pInputText id="valor" [(ngModel)]="productCreate.valor" type="number" />
+
+    </div>
+
+    <div class="flex flex-column gap-2">
+
+        <label htmlFor="cantidad">Cantidad</label>
+
+        <input pInputText id="cantidad" [(ngModel)]="productCreate.stock.cantidad" type="number" />
+
+    </div>
+
+    <br>
+
+    <div class="flex flex-column gap-2">
+
+        <p-dropdown [options]="listStatusProduct" [(ngModel)]="productCreate.id_estado" optionLabel="nameStatus"
+            optionValue="idStatus" [showClear]="true" placeholder="Seleccionar un estado"></p-dropdown>
+
+    </div>
+
+    <br>
+
+    <button pButton pRipple label="Guardar" (click)="saveInformation()" class="p-button-info"></button>
+
+</p-card>
